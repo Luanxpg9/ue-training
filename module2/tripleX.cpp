@@ -33,7 +33,14 @@ int main()
     int GuessProduct = GuessA * GuessB * GuessC;
 
     //Show player's sum and product
-    // std::cout <<
+    if (GuessSum == Sum)
+    {
+        std::cout << "Congrats, You're a genius!!" << std::endl;
+    }
+    else
+    {
+        std::cout << "Oh no! You're wrong, sorry. Try again later!! ^^" << std::endl;
+    }
 
     return 0;
 }
