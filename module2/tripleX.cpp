@@ -1,10 +1,15 @@
 #include <iostream>
 
-int main()
+void PrintIntroduction()
 {
     //Print welcome messages to the terminal
     std::cout << "Try solving this little puzzle, little fella\n";
     std::cout << "  or are you too smol brain for it? ...";
+}
+
+bool PlayGame()
+{
+    PrintIntroduction();
 
     // Declare variables
     int VarA = 4;
@@ -33,13 +38,26 @@ int main()
     int GuessProduct = GuessA * GuessB * GuessC;
 
     //Show player's sum and product
-    if (GuessSum == Sum)
+    if (GuessSum == Sum && GuessProduct == Product)
     {
         std::cout << "Congrats, You're a genius!!" << std::endl;
+        return true;
     }
     else
     {
         std::cout << "Oh no! You're wrong, sorry. Try again later!! ^^" << std::endl;
+        return false;
+    }
+}
+
+int main()
+{
+    bool bLevelComplete = false;
+    while (bLevelComplete == false)
+    {
+        bLevelComplete = PlayGame();
+        std::cin.clear();  // Clear errors
+        std::cin.ignore(); // Discards the buffer
     }
 
     return 0;
