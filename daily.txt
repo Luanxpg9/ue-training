@@ -1,0 +1,3 @@
+01-05-2021 [module 2 - 13 at 2 am]
+ •I know a lot about C and a little about C++ but the C base helps a lot, and the main function is exactly it, the main
+ code that run things through it.
