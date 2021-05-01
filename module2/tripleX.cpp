@@ -28,5 +28,12 @@ int main()
     std::cin >> GuessA >> GuessB >> GuessC;
     std::cout << "Your guess is: " << GuessA << " " << GuessB << " " << GuessC << std::endl;
 
+    // Set up the sum and product of the player's guesses
+    int GuessSum = GuessA + GuessB + GuessC;
+    int GuessProduct = GuessA * GuessB * GuessC;
+
+    //Show player's sum and product
+    // std::cout <<
+
     return 0;
 }
