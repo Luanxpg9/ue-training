@@ -7,18 +7,26 @@ int main()
     std::cout << "  or are you too smol brain for it? ...";
 
     // Declare variables
-    int a = 4;
-    int b = 3;
-    int c = 2;
+    int VarA = 4;
+    int VarB = 3;
+    int VarC = 2;
+    int GuessA = 0;
+    int GuessB = 0;
+    int GuessC = 0;
 
     // Set up the game logic
-    int sum = a + b + c;
-    int product = a * b * c;
+    int Sum = VarA + VarB + VarC;
+    int Product = VarA * VarB * VarC;
 
     // Show the numbers logic
     std::cout << std::endl;
-    std::cout << sum << '\n'
-              << product << std::endl;
+    std::cout << "There are 3 numbers in the code" << std::endl;
+    std::cout << "The sum of these 3 numbers are: " << Sum << std::endl;
+    std::cout << "The product of these 3 numbers are: " << Product << std::endl;
+
+    // Get the player's guess
+    std::cin >> GuessA >> GuessB >> GuessC;
+    std::cout << "Your guess is: " << GuessA << " " << GuessB << " " << GuessC << std::endl;
 
     return 0;
 }
