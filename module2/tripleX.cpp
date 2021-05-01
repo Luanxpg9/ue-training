@@ -2,6 +2,7 @@
 
 int main()
 {
-    std::cout << "Hello There!";
+    std::cout << "Try solving this little puzzle, little fella\n";
+    std::cout << "  or are you too smol brain for it? ...";
     return 0;
 }
