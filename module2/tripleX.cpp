@@ -1,4 +1,5 @@
 #include <iostream>
+#include <ctime>
 
 void PrintIntroduction(int Difficulty)
 {
@@ -27,9 +28,9 @@ bool PlayGame(int Difficulty)
     PrintIntroduction(Difficulty);
 
     // Declare variables
-    int VarA = rand() % Difficulty;
-    int VarB = rand() % Difficulty;
-    int VarC = rand() % Difficulty;
+    int VarA = rand() % Difficulty * 2;
+    int VarB = rand() % Difficulty * 2;
+    int VarC = rand() % Difficulty * 2;
     int GuessA = 0;
     int GuessB = 0;
     int GuessC = 0;
@@ -71,10 +72,13 @@ bool PlayGame(int Difficulty)
 
 int main()
 {
-    //Max level difficulty
+    // Max level difficulty
     const unsigned int MaxDifficulty = 5;
 
-    //Current level difficulty
+    // create a new seed based on time
+    srand(time(NULL));
+
+    // Current level difficulty
     unsigned int LevelDifficulty = 1;
     while (LevelDifficulty <= MaxDifficulty)
     {
